@@ -1,7 +1,9 @@
 # UDP-and-TCP-client-communication
 This project implements a messaging server with UDP and TCP client communication, handling subscriptions and message broadcasting:
-Message Packet Structure: The packet contains three main fields for message transmission from UDP clients, with an extended type field to support commands such as subscribe or exit.
-Additionally, two extra fields are included to transmit the UDP client's address.
+
+
+    Message Packet Structure: The packet contains three main fields for message transmission from UDP clients, with an extended type field to support commands such as subscribe or exit.
+    Additionally, two extra fields are included to transmit the UDP client's address.
 
     Server Implementation (server.cpp): The server acts as an intermediary between clients. It initializes both UDP and TCP sockets to receive messages.
     Using the run_chat_multiserver function, it creates a poll to multiplex between the UDP socket, TCP socket, and standard input. When a TCP client requests a connection, 
